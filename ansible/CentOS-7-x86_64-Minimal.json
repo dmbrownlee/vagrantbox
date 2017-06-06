@@ -56,7 +56,7 @@
     },
     {  "type": "shell",
        "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
-       "inline": [ "yum -y install bzip2 dkms"]
+       "inline": [ "yum -y install bzip2 dkms kernel-devel"]
     },
     {  "type": "shell",
        "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
