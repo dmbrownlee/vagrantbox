@@ -12,7 +12,7 @@
   },
   "builders": [{
     "type": "virtualbox-iso",
-    "guest_os_type": "Ubuntu_64",
+    "guest_os_type": "RedHat_64",
     "iso_urls": [
       "{{user `env_home`}}/Downloads/CentOS-{{user `os_version`}}-x86_64-{{user `os_iso_type`}}-{{user `os_spin`}}.iso",
       "http://centos.s.uw.edu/centos/{{user `os_version`}}/isos/x86_64/CentOS-{{user `os_version`}}-x86_64-{{user `os_iso_type`}}-{{user `os_spin`}}.iso"
