@@ -1,0 +1,14 @@
+---
+# Run packer to build the base box
+- name: Create the Vagrant base box
+  hosts: localhost
+  vars:
+    - vmname: "kali-linux-2018.1"
+    - urlbase: "https://images.offensive-security.com/virtual-images"
+    - ova_file: "kali-linux-2018.1-vm-amd64.ova"
+    - ova_checksum: "sha256:04c47fc52ca59c0d0c4f6ddbca216fb39f93b817e08b7d21fb2ca00cf7b6122f"
+    #- ova_vmname: "Kali-Linux-2018.1-vm-amd64"
+    - ova_vmname: "vm"
+  roles:
+    - role: vagrantbox-kali-pack
+    - role: vagrantbox-install
